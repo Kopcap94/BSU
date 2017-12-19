@@ -2,7 +2,7 @@ require 'httparty'
 require 'json'
 require 'uri'
 
-module BSF
+module BSU
   PATH = File.dirname(__FILE__)
   CFG_PATH = PATH + '/config.json'
 
@@ -43,7 +43,6 @@ module BSF
         :symbolize_names => true
       )
 
-      done = false
       last = nil
       to_publish = []
 
@@ -95,4 +94,4 @@ module BSF
   end
 end
 
-BSF.init
+BSU.init
