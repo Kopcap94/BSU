@@ -23,16 +23,11 @@ module BSF
         :symbolize_names => true
       )
 
-      f = false
       resp[ :items ].each do | item |
         if item[ :snippet ][ :type ] != "upload" then
           next
         end
-        if f then
-          next
-        end
 
-        f = true
         post_VK( item[ :snippet ][ :title ], item[ :contentDetails ][ :upload ][ :videoId ] )
       end
     end
